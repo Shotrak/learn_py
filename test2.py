@@ -1,7 +1,7 @@
 #Запускается селект который считает кол-во записей по условию, если их больше 0, то он их затирает нужными данными
 import psycopg2 #подключение к Postgre
 import logging #для логирования
-logging.basicConfig(level=logging.INFO, filename="/sambashare/share/dev/py3/py.log",filemode="w",format="%(asctime)s %(levelname)s %(message)s") #Каждое выполнение затирает файл, пофиксить
+logging.basicConfig(level=logging.INFO, filename="/opt/git/learn_py/log/py.log",filemode="w",format="%(asctime)s %(levelname)s %(message)s") #Каждое выполнение затирает файл, пофиксить
 logging.debug("A DEBUG Message")
 
 try:
