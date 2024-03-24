@@ -18,7 +18,7 @@ sql_update_query = """ update client set f_name = 'Иван' where f_name = 'Р�
 cursor.execute(sql_update_query)
 conn.commit()
 res = cursor.rowcount
-print (res, "Запись успешно обновлена")
+print (res, "Записей успешно обновлено")
 #SELECT AFTER UPDATE
 print ("таблица после обновления")
 sql_select_query = """ select * from client """
