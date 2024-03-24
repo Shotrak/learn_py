@@ -41,3 +41,4 @@ else:
 cursor.close() # закрываем курсор
 conn.close() # закрываем соединение
 logging.info("Соединение закрыто")
+#test for slave
