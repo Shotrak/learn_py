@@ -28,7 +28,7 @@ if all_clients > all_clients_0 :
    #logging.info(f"Найдено :", {all_clients})
    sql_update_query = """ update client set f_name = 'Иван' where f_name = 'Роман' """
    cursor.execute(sql_update_query)
-   sql_after_update = cursor.fetchrow()
+   sql_after_update = cursor.fetchrow
    conn.commit()
    #sql_after_update = cursor.fetchall()
    print("Обновлено строк: ", sql_after_update)
