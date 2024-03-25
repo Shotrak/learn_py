@@ -17,3 +17,13 @@ if all_clients > 0:
     print ("1")
 else:
     print("2")
+
+sql_update_query = "update client set f_name = 'Иван' where f_name = 'Роман'"
+cursor.execute(sql_update_query)
+update_clients = cursor.rowcount
+print("updated:",update_clients)
+
+cursor.close() # закрываем курсор
+conn.close() # закрываем соединение
+if conn.close = True:
+    logging.info("Соединение закрыто")
