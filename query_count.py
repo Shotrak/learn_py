@@ -15,5 +15,5 @@ all_clients = cursor.rowcount
 print(all_clients)
 if all_clients > 0:
     print ("1")
-    else:
-        print("2")
+else:
+    print("2")
