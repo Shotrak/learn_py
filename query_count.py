@@ -13,3 +13,7 @@ sql_select_query = """ select count (*) from client c where f_name = 'Роман
 cursor.execute(sql_select_query)
 all_clients = cursor.rowcount
 print(all_clients)
+if all_clients > 0:
+    print ("1")
+    else:
+        print("2")
