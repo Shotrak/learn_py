@@ -11,5 +11,5 @@ cursor = conn.cursor()
 
 sql_select_query = """ select count (*) from client c where f_name = 'Роман' """
 cursor.execute(sql_select_query)
-all_clients = cursor.fetchone(1)
+all_clients = cursor.fetchrow(1)
 print(all_clients)
