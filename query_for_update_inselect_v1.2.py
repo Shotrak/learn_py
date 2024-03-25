@@ -17,26 +17,21 @@ cursor = conn.cursor()
 
 sql_select_query = """ select count (*) from client c where f_name = 'Роман' """
 cursor.execute(sql_select_query)
-all_clients = cursor.fetchone()
-null_clients = """ select count (*) from client c where f_name = 'БЛАБЛА' """
-cursor.execute(null_clients)
-all_clients_0 = cursor.fetchone()
+all_clients = cursor.rowcount
 #print (all_clients)
 
-if all_clients > all_clients_0 :
+if all_clients > 0:
    print ("Найдено : ", all_clients) 
-   #logging.info(f"Найдено :", {all_clients})
+   logging.info(f"Найдено :", {all_clients})
    sql_update_query = """ update client set f_name = 'Иван' where f_name = 'Роман' """
    cursor.execute(sql_update_query)
-   sql_after_update = cursor.fetchall()
+   sql_after_update = cursor.rowcount()
    conn.commit()
-   #sql_after_update = cursor.fetchall()
    print("Обновлено строк: ", sql_after_update)
-   #logging.info(f"Обновлено строк :", {sql_after_update})
+   logging.info(f"Обновлено строк :", {sql_after_update})
 else:
     print("Строки не найдены")
     logging.info("Строки не найдены")
-
 
 cursor.close() # закрываем курсор
 conn.close() # закрываем соединение
