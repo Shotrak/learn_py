@@ -25,5 +25,5 @@ print("updated:",update_clients)
 
 cursor.close() # закрываем курсор
 conn.close() # закрываем соединение
-if conn.close = True:
+if conn.close == True:
     logging.info("Соединение закрыто")
